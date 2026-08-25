@@ -4,9 +4,9 @@
 
 ## 기술 기준
 
-- Kotlin 2.3.21, Jetpack Compose BOM 2026.08.00
+- Kotlin 2.3.21, Jetpack Compose BOM 2025.08.01
 - AGP 9.2.0, Gradle 9.4.1, JDK 17
-- compile SDK 37, Play 정책 대상 SDK 36, min SDK 26
+- compile/target SDK 36, min SDK 26
 - 운영 API: `https://www.give-him.org`
 
 ## 빌드

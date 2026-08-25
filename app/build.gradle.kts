@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "org.givehim.app"
-    compileSdk = 37
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "org.givehim.app"
@@ -47,7 +47,7 @@ android {
 kotlin { jvmToolchain(17) }
 
 dependencies {
-    val composeBom = platform("androidx.compose:compose-bom:2026.08.00")
+    val composeBom = platform("androidx.compose:compose-bom:2025.08.01")
     implementation(composeBom)
     androidTestImplementation(composeBom)
     implementation("androidx.activity:activity-compose:1.12.4")
