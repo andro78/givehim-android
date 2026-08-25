@@ -35,6 +35,7 @@ private enum class Tab { Home, Stories, Submit }
     Text("GIVE WITH CONFIDENCE", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary)
     Text("마음을 보내고,\n변화를 확인하세요.", style = MaterialTheme.typography.displayMedium, fontWeight = FontWeight.Bold)
     Text("도움이 필요한 이야기를 안전하게 듣고, 확인 가능한 근거와 결과로 연결합니다.", style = MaterialTheme.typography.bodyLarge)
+    Card { Text("기부힘은 윤준호·손효준 공동대표 후보 2인이 준비 중인 프로젝트입니다. 아직 등록된 비영리단체가 아니며 현재 앱에서 후원금이나 기부금을 받지 않습니다.", Modifier.padding(16.dp), style = MaterialTheme.typography.bodySmall) }
     Button(submit, Modifier.fillMaxWidth().heightIn(min = 52.dp)) { Text("사연 전하기") }
     OutlinedButton(openStories, Modifier.fillMaxWidth().heightIn(min = 52.dp)) { Text("확인된 사연 보기") }
     HorizontalDivider(Modifier.padding(vertical = 14.dp))
