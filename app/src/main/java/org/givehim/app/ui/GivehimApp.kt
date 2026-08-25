@@ -23,9 +23,9 @@ private enum class Tab { Home, Stories, Submit }
 @Composable fun GivehimApp(vm: MainViewModel = viewModel()) {
     var tab by remember { mutableStateOf(Tab.Home) }
     Scaffold(bottomBar = { NavigationBar {
-        NavigationBarItem(tab == Tab.Home, { tab = Tab.Home }, { Icon(Icons.Outlined.Home, null) }, { Text("홈") })
-        NavigationBarItem(tab == Tab.Stories, { tab = Tab.Stories }, { Icon(Icons.Outlined.FavoriteBorder, null) }, { Text("사연") })
-        NavigationBarItem(tab == Tab.Submit, { tab = Tab.Submit }, { Icon(Icons.Outlined.AddCircle, null) }, { Text("사연 접수") })
+        NavigationBarItem(selected = tab == Tab.Home, onClick = { tab = Tab.Home }, icon = { Icon(Icons.Outlined.Home, null) }, label = { Text("홈") })
+        NavigationBarItem(selected = tab == Tab.Stories, onClick = { tab = Tab.Stories }, icon = { Icon(Icons.Outlined.FavoriteBorder, null) }, label = { Text("사연") })
+        NavigationBarItem(selected = tab == Tab.Submit, onClick = { tab = Tab.Submit }, icon = { Icon(Icons.Outlined.AddCircle, null) }, label = { Text("사연 접수") })
     } }) { padding -> Box(Modifier.padding(padding)) { when (tab) { Tab.Home -> HomeScreen({ tab = Tab.Stories }, { tab = Tab.Submit }); Tab.Stories -> StoriesScreen(vm); Tab.Submit -> SubmitScreen(vm) } } }
 }
 
